@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Sprint 4 - Cluckin Bot</title>
+		<link rel="stylesheet" href="./css/style.css">
+	</head>
+
+	<body>
+		<div class="game">
+			<audio id="soundtrack" src="./sound/soundtrack.mp4"></audio>
+			<button id="soundtrack-button">Soundtrack: Off</button>
+			<canvas id="canvas" width="1300" height="475"></canvas>
+			<script type="text/javascript" src="./js/robo.js"></script>
+			<script type="text/javascript" src="./js/funcoes.js"></script>
+			<div class="health-bars">
+				<div>
+					<h2>Wall-e</h2>
+					<div class="health-bar">
+						<div class="health" id="robo1"></div>
+					</div>
+				</div>
+				<div>
+					<h2>Curiosity</h2>
+					<div class="health-bar">
+						<div class="health" id="robo2"></div>
+					</div>
+				</div>
+			</div>
+			<h2 id="vencedor">FIGHT</h2>
+		</div>
+
+	</body>
+</html>
