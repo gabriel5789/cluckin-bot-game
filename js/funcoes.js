@@ -1,4 +1,4 @@
-(function () {
+window.onload = (function () {
 	const cnv = document.querySelector('#canvas');
 	const ctx = cnv.getContext('2d');
 
@@ -16,22 +16,15 @@
 	let moveDown2 = false;
 
 	// imagens
-	let img1 = new Image();
-	img1.src = './img/robot1Right.png';
-	img1.alt = 'robô azul visto de cima';
-
-	let img2 = new Image();
-	img2.src = './img/robot2Left.png';
-	img2.alt = 'robô vermelho visto de cima';
 
 	// arrays
 	const robos = [];
 
 	// robos
-	const robo1 = new Robo(img1, "robot1", 100, 200, 150, 150, 5, 3);
+	const robo1 = new Robo(1, 100, 200, 150, 150, 5, 3);
 	robos.push(robo1);
 
-	const robo2 = new Robo(img2, "robot2", 1050, 200, 150, 150, 5, 4);
+	const robo2 = new Robo(2, 1050, 200, 150, 150, 5, 4);
 	robos.push(robo2);
 
 	// pressionar as teclas
@@ -182,7 +175,7 @@
 			// ctx.fillRect(spr.posX+20, spr.posY+20, spr.width-50, spr.height-30); 
 			ctx.drawImage(spr.img, spr.posX, spr.posY, spr.width, spr.height);
 			
-			spr.img.src = spr.imgs[spr.direcao-1];
+			spr.img = spr.imgs[spr.direcao-1];
 		}
 	}
 

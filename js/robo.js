@@ -3,17 +3,17 @@
 // direcao: 1 - cima, 2 - baixo, 3 - direita, 4 - esquerda
 // 5 - diagonal sup. direita, 6 - diagonal sup. esquerda
 // 7 - diagonal inf. direita, 8 - diagonal inf. esquerda
-const Robo = function (img, src, posX, posY, width, height, velocidade, direcao) {
-    this.img = img;
+const Robo = function (src, posX, posY, width, height, velocidade, direcao) {
     this.imgs = [
-        "./img/" + src + "Up.png",
-        "./img/" + src + "Down.png",
-        "./img/" + src + "Right.png",
-        "./img/" + src + "Left.png",
-        "./img/" + src + "UpRight.png",
-        "./img/" + src + "UpLeft.png",
-        "./img/" + src + "DownRight.png",
-        "./img/" + src + "DownLeft.png",];
+        document.querySelector(".down" + src),
+        document.querySelector(".up" + src),
+        document.querySelector(".right" + src),
+        document.querySelector(".left" + src),
+        document.querySelector(".up-left" + src),
+        document.querySelector(".up-right" + src),
+        document.querySelector(".down-left" + src),
+        document.querySelector(".down-right" + src)];
+    this.img = this.imgs[direcao-1];
     this.posX = posX;
     this.posY = posY;
     this.width = width;

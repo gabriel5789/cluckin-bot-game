@@ -90,3 +90,7 @@ h2 {
     top: 701px;
     left: 0;
 }
+
+.image-container {
+    display: none;
+}
